@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox Layout Example</title>
+  <style>
+    * {
+    margin: 0px;
+    padding: 0px;
+    }
+    .main-container {
+      background-color: #b2ebf2;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    }
+
+    .navbar {
+      width: 100%;
+      height: 10%;
+      background-color: #00897b;
+      /* box-sizing: border-box; */
+    }
+
+    .main {
+        display: flex;
+    width: 100%;
+    height: 88%;
+    margin: 1rem auto;
+    box-sizing: border-box;
+    }
+
+    .aside {
+        flex-grow: 3;
+    background-color: #43a047;
+    box-sizing: border-box;
+    margin-right: 1rem;
+    }
+
+    .article {
+        flex-grow: 9;
+    background-color: #ffa726;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    padding: 0.5rem;
+    }
+
+    .article .child {
+      flex-grow: 1;
+      background-color: #fdd835;
+      margin: 0.5rem;
+      padding-bottom: 0;
+      width: calc(33.33% - 1rem);
+      box-sizing: border-box;
+    }
+
+    .article .child:before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="navbar"></div>
+    <div class="main">
+      <div class="aside"></div>
+      <div class="article">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

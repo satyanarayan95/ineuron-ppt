@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog App</title>
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .blog-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .blog-item {
+      margin-bottom: 20px;
+    }
+
+    .blog-item h3 {
+      margin-top: 0;
+    }
+
+    .blog-item p {
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Blog App</h1>
+
+    <div id="blogs">
+      <h2>Blog List</h2>
+      <ul class="blog-list"></ul>
+    </div>
+
+    <div id="add-blog">
+      <h2>Add New Blog</h2>
+      <form id="add-blog-form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" required>
+        </div>
+        <div class="form-group">
+          <label for="body">Body</label>
+          <textarea id="body" required></textarea>
+        </div>
+        <button type="submit">Add Blog</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
